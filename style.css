@@ -1,0 +1,97 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: 0.3s;
+}
+
+nav.scrolled {
+    background: #222;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: yellow;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding-top: 60px;   /* ADD THIS */
+}
+.section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0;
+}
+
+.home { background: #6a11cb; }
+.about { background: #2575fc; }
+.services { background: #ff512f; }
+.contact { background: #11998e; }
